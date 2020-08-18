@@ -1,21 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
+import GatsbyImage from '../images/home-page_hero-collage.png';
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="content">
+      <div className="left-content">
+        <h1 className="catch">Reactユーザーのためのモダンフレームワーク</h1>
+        <p className="lead">Gatsbyは、ウェブサイトやアプリを作成するためのReactベースのオープンソースフレームワークです。 2000を超えるプラグインと、デフォルトで組み込まれているパフォーマンス、スケーラビリティ、およびセキュリティを使用して、想像できるあらゆるものを構築します。</p>
+        <Link to="/start/" className="link">Quick Start　→</Link>
+      </div>
+      <div className="right-content">
+        <img src={GatsbyImage} alt="" />
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
