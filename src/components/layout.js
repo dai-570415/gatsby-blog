@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Image from 'gatsby-image'
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -13,20 +15,26 @@ const Layout = ({ children }) => {
           title
         }
       }
+      top: file(relativePath: {eq: "top.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
   return (
     <div className="container">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main><div className="inner-main">{children}</div></main>
-        <footer>
-          <div className="inner-footer">
-            <h6>Copyright {new Date().getFullYear()} with gatsby.</h6>
-          </div>
-        </footer>
-      </div>
+      <figure>
+        <Image fluid={ data.top.childImageSharp.fluid } className="top-image" alt="" />
+      </figure>
+      <main>
+        <div className="inner-main">{children}</div>
+      </main>
+      <Footer siteTitle={data.site.siteMetadata.title} />
     </div>
   )
 }

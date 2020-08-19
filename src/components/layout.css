@@ -1,5 +1,11 @@
 header {
-    margin: 0 0 50px 0;
+    margin: 0 0 10px 0;
+    background: rgba(255, 255, 255, .9);
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
 }
 .inner-main {
     color: #333;
@@ -27,6 +33,16 @@ header {
 .inner-header a:hover {
     border-bottom: 1px solid #4b0082;
 }
+.inner-header .logo-image {
+    display: inline-block;
+    width: 30px;
+    margin: 0 10px 0 0;
+    top: 8px;
+    position: relative;
+}
+.inner-header .navi svg {
+    margin: 0 10px 0 0;
+}
 .inner-main {
     padding: 50px 0;
 }
@@ -42,6 +58,7 @@ header {
     text-align: center;
     color: #fff;
     width: 200px;
+    margin: 0 0 50px 0;
     padding: 15px;
     border-radius: 5px;
     background: #4b0082;
@@ -60,7 +77,7 @@ header {
 .content .right-content {
     width: 55%;
 }
-.content .right-content img {
+.content .right-content .hero-image {
     width: 150%;
 }
 .explanation {
@@ -74,4 +91,13 @@ header {
 }
 .code:last-child {
     margin: 0;
+}
+.top-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 0 30px 0;
+}
+.inner-footer p {
+    font-size: 12px;
 }
