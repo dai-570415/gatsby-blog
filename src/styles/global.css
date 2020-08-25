@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 * {
-    font-size: 16px;
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.75;
     margin: 0;
@@ -12,11 +11,26 @@
 body {
     overflow-x: hidden;
 }
-h1 { font-size: 45px; font-weight: 100; line-height: 1; }
-h2 { font-size: 30px; font-weight: 100; }
-h3 { font-size: 25px; font-weight: 100; }
-h4 { font-size: 18px; font-weight: 100; }
+h1 { 
+    font-size: 40px; 
+    font-weight: 500;
+    line-height: 1;
+}
+h2 { font-size: 25px; font-weight: 500; }
+h3 { font-size: 18px; font-weight: 500; }
+h4 { font-size: 16px; font-weight: 100; }
 h5 { font-size: 14px; font-weight: 100; }
 h6 { font-size: 12px; font-weight: 100; }
-p { font-size: 18px; font-weight: 100;  }
-a { text-decoration: none; font-weight: 100; color: #4b0082; }
+p { 
+    text-align: justify;
+    font-size: 16px; 
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+    font-weight: 100;
+    color: #4b0082;
+}
+ul li {
+    list-style: none;
+}

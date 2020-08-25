@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gatsby Blog`,
+    description: `This is Gatsby Blog.`,
     author: `@dai-designing`,
   },
   plugins: [
@@ -27,5 +27,30 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        // spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: `YourKey`,
+        accessToken: `YourKey`,
+        host: process.env.CONTENTFUL_HOST,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "YourKey",
+          authDomain: "YourKey",
+          databaseURL: "YourKey",
+          projectId: "YourKey",
+          storageBucket: "YourKey",
+          messagingSenderId: "YourKey",
+          appId: "YourKey",
+          measurementId: "YourKey"
+        }
+      }
+    }
   ],
 }
